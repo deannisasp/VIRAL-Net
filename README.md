@@ -40,7 +40,7 @@ viral-net/
 Disarankan menggunakan Python 3.10 atau 3.11 di dalam virtual environment.
 
 ```bash
-git clone <url-repo-anda>
+git clone (https://github.com/deannisasp/VIRAL-Net)
 cd viral-net
 
 python -m venv venv
