@@ -32,7 +32,6 @@ viral-net/
 │   ├── forecast_results.pkl   # Cache hasil forecasting
 │   └── README.md              # Catatan file model tambahan yang perlu disiapkan manual
 ├── requirements.txt
-├── .gitignore
 └── README.md
 ```
 
