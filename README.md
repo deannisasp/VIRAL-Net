@@ -52,7 +52,6 @@ pip install -r requirements.txt
 Catatan:
 - `torch` di `requirements.txt` menginstal versi CPU secara default. Jika ingin memakai GPU, install `torch` sesuai instruksi resmi di [pytorch.org](https://pytorch.org/get-started/locally/) sebelum menjalankan `pip install -r requirements.txt`.
 - Model IndoBERTweet (`indolem/indobertweet-base-uncased`) dan RoBERTa sentimen (`w11wo/indonesian-roberta-base-sentiment-classifier`) diunduh otomatis dari Hugging Face saat aplikasi pertama kali dijalankan, jadi koneksi internet dibutuhkan pada run pertama.
-- Lihat `models/README.md` untuk file model `bertopic(1).pkl` yang belum disertakan di repo ini dan perlu ditambahkan manual.
 
 ## Menjalankan Aplikasi
 
@@ -74,9 +73,6 @@ Data tweet yang sudah dipreprocessing minimal berisi kolom berikut untuk halaman
 - `like`, `retweet`, `reply`, `quote` - metrik interaksi
 - `verified_status` - status verifikasi akun
 
-## Lisensi
-
-Tambahkan berkas lisensi sesuai kebutuhan (misalnya MIT License) sebelum repo dipublikasikan.
-
 ---
 Developed by Deannisa SP
+deannisa.03.dspp@gmail.com
