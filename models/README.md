@@ -1,24 +1,21 @@
-# Models Directory
+# Direktori Models
 
-Letakkan trained models di sini:
+File model yang dibutuhkan aplikasi ini.
 
-## Classification Models
-- `viralnet_classifier.pth` - PyTorch classification model
-- `scaler.pkl` - MinMax scaler untuk metadata
-- `label_encoder.pkl` - Label encoder untuk classes
+## Sudah tersedia di folder ini
+- `viral_classifier.pkl` - hasil training model klasifikasi & regresi viralitas (MLP + scaler + label encoder)
+- `topic_results.pkl` - hasil ekstraksi topik dari BERTopic (cache, opsional dimuat ulang lewat tombol "Load Hasil Topik Tersimpan")
+- `forecast_results.pkl` - hasil forecasting LightGBM (cache, opsional dimuat ulang lewat tombol "Load Hasil Forecast Tersimpan")
 
-## Forecasting Models
-- `arima_model.pkl` - ARIMA model
-- `sarima_model.pkl` - Seasonal ARIMA model
-- `prophet_model.pkl` - Facebook Prophet model
-- `lstm_model.h5` - LSTM neural network
-- `xgboost_model.pkl` - XGBoost model
-- `ensemble_weights.json` - Ensemble configuration
+## Belum tersedia, perlu di-download manual
+- `bertopic(1).pkl` (~400 MB) - model BERTopic terlatih yang dipakai di halaman Model Forecasting (`BERTOPIC_MODEL_PATH` pada `modules/forecasting.py`). File ini tidak disertakan di repo (dan sudah masuk `.gitignore`) karena ukurannya di atas batas GitHub, dihosting terpisah sebagai asset di **GitHub Releases** repo ini.
 
-## Tokenizer
-- `indobert_tokenizer/` - IndoBERT tokenizer files (auto-downloaded jika belum ada)
+Cara mendapatkannya:
+1. Buka halaman **Releases** repo ini di GitHub.
+2. Download file `bertopic(1).pkl` dari asset release yang tersedia.
+3. Letakkan file tersebut di folder `models/` pada clone lokal kamu, dengan nama persis `bertopic(1).pkl`.
 
-## Notes
-- Model files tidak di-commit ke git (terlalu besar)
-- Download dari Google Drive atau train ulang dari notebook
-- Pastikan path model sesuai dengan konfigurasi di `utils/model_loader.py`
+Aplikasi akan otomatis mendeteksi model ini saat halaman Model Forecasting dibuka. Jika file belum ada, akan muncul pesan error yang mengarahkan untuk menyiapkan file model tersebut.
+
+## Model IndoBERTweet & RoBERTa
+Model teks (IndoBERTweet untuk embedding, RoBERTa untuk sentimen) dimuat langsung dari Hugging Face lewat `AutoModel.from_pretrained(...)` saat aplikasi berjalan, jadi tidak perlu disimpan manual di folder ini. Pastikan environment yang menjalankan aplikasi memiliki akses internet saat pertama kali dijalankan agar bobot model bisa diunduh (lalu di-cache secara lokal).
