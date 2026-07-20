@@ -41,7 +41,7 @@ viral-net/
 Disarankan menggunakan Python 3.10 atau 3.11 di dalam virtual environment.
 
 ```bash
-git clone <url-repo-anda>
+git clone (https://github.com/deannisasp/VIRAL-Net)
 cd viral-net
 
 python -m venv venv
@@ -85,9 +85,6 @@ Data tweet yang sudah dipreprocessing minimal berisi kolom berikut untuk halaman
 - `like`, `retweet`, `reply`, `quote` - metrik interaksi
 - `verified_status` - status verifikasi akun
 
-## Lisensi
-
-Tambahkan berkas lisensi sesuai kebutuhan (misalnya MIT License) sebelum repo dipublikasikan.
-
 ---
 Developed by Deannisa SP
+deannisa.03.dspp@gmail.com
