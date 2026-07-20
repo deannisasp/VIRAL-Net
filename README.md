@@ -32,6 +32,7 @@ viral-net/
 │   ├── forecast_results.pkl   # Cache hasil forecasting
 │   └── README.md              # Catatan file model tambahan yang perlu disiapkan manual
 ├── requirements.txt
+├── .gitignore
 └── README.md
 ```
 
@@ -40,7 +41,7 @@ viral-net/
 Disarankan menggunakan Python 3.10 atau 3.11 di dalam virtual environment.
 
 ```bash
-git clone (https://github.com/deannisasp/VIRAL-Net)
+git clone <url-repo-anda>
 cd viral-net
 
 python -m venv venv
@@ -52,6 +53,17 @@ pip install -r requirements.txt
 Catatan:
 - `torch` di `requirements.txt` menginstal versi CPU secara default. Jika ingin memakai GPU, install `torch` sesuai instruksi resmi di [pytorch.org](https://pytorch.org/get-started/locally/) sebelum menjalankan `pip install -r requirements.txt`.
 - Model IndoBERTweet (`indolem/indobertweet-base-uncased`) dan RoBERTa sentimen (`w11wo/indonesian-roberta-base-sentiment-classifier`) diunduh otomatis dari Hugging Face saat aplikasi pertama kali dijalankan, jadi koneksi internet dibutuhkan pada run pertama.
+
+## Setup Model BERTopic
+
+Model `bertopic(1).pkl` (~400 MB) yang dipakai di halaman **Model Forecasting** tidak disertakan langsung di repo ini karena ukurannya di atas batas GitHub. File ini dihosting terpisah di halaman **[Releases](../../releases)** repo ini.
+
+Cara setup:
+1. Buka halaman **Releases** repo ini di GitHub.
+2. Download file `bertopic(1).pkl` dari asset release yang tersedia.
+3. Letakkan file tersebut di folder `models/`, dengan nama persis `bertopic(1).pkl`.
+
+Tanpa file ini, halaman **Model Forecasting** akan menampilkan pesan error saat mencoba memuat model BERTopic. Detail lebih lanjut ada di `models/README.md`.
 
 ## Menjalankan Aplikasi
 
@@ -73,6 +85,9 @@ Data tweet yang sudah dipreprocessing minimal berisi kolom berikut untuk halaman
 - `like`, `retweet`, `reply`, `quote` - metrik interaksi
 - `verified_status` - status verifikasi akun
 
+## Lisensi
+
+Tambahkan berkas lisensi sesuai kebutuhan (misalnya MIT License) sebelum repo dipublikasikan.
+
 ---
 Developed by Deannisa SP
-deannisa.03.dspp@gmail.com
