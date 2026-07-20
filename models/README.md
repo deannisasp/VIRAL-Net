@@ -8,7 +8,7 @@ File model yang dibutuhkan aplikasi ini.
 - `forecast_results.pkl` - hasil forecasting LightGBM (cache, opsional dimuat ulang lewat tombol "Load Hasil Forecast Tersimpan")
 
 ## Belum tersedia, perlu di-download manual
-- `bertopic(1).pkl` (~400 MB) - model BERTopic terlatih yang dipakai di halaman Model Forecasting (`BERTOPIC_MODEL_PATH` pada `modules/forecasting.py`). File ini tidak disertakan di repo (dan sudah masuk `.gitignore`) karena ukurannya di atas batas GitHub, dihosting terpisah sebagai asset di **GitHub Releases** repo ini.
+- `bertopic(1).pkl` (~400 MB) - model BERTopic terlatih yang dipakai di halaman Model Forecasting (`BERTOPIC_MODEL_PATH` pada `modules/forecasting.py`). File ini tidak disertakan di repo karena ukurannya di atas batas GitHub, dihosting terpisah sebagai asset di **GitHub Releases** repo ini.
 
 Cara mendapatkannya:
 1. Buka halaman **Releases** repo ini di GitHub.
